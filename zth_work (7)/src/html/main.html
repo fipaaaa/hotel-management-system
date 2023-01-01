@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>老奶奶酒店</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/my.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/js/my_main.js"></script>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+
+<!--功能显示-->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" >
+    <!--        左对齐-->
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="./main.html">
+        <img src="/resources/logo.jpeg" alt="logo" style="width:60px;">
+    </a>
+
+    <!-- 普通导航 -->
+    <ul class="nav col-lg-auto " id="function_opt">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">
+                客户管理
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="./add_customer.html">增加客户</a>
+                <a class="dropdown-item" href="./del_customer.html">删除客户</a>
+                <a class="dropdown-item" href="./change_customer.html">修改客户</a>
+                <a class="dropdown-item" href="./search_customer.html">查询客户</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">
+                订单管理
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">创建订单</a>
+                <a class="dropdown-item" href="#">删除订单</a>
+                <a class="dropdown-item" href="#">修改订单</a>
+                <a class="dropdown-item" href="#">查询订单</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop3" data-toggle="dropdown">
+                客房管理
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">增加客房</a>
+                <a class="dropdown-item" href="#">删除客房</a>
+                <a class="dropdown-item" href="#">修改客房</a>
+                <a class="dropdown-item" href="#">查询客房</a>
+                <a class="dropdown-item" href="./all_.html">查看所有客房</a>
+            </div>
+        </li>
+        <!--        下拉导航-->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop4" data-toggle="dropdown">
+                入住信息管理
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">增加入住信息</a>
+                <a class="dropdown-item" href="#">删除入住信息</a>
+                <a class="dropdown-item" href="#">修改入住信息</a>
+                <a class="dropdown-item" href="#">查询入住信息</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown" id="navbardrop5">
+            <div class="nav-link dropdown-toggle"  data-toggle="dropdown" id="item1"></div>
+            <div class="dropdown-menu" id="userdrop">
+                <div id="item2" class="dropdown-item"></div>
+                <div id="item3" class="dropdown-item"></div>
+                <div id="item4" class="dropdown-item"></div>
+            </div>
+        </li>
+    </ul>
+    <!--        右对齐-->
+
+    <div class="col-lg-auto">
+        <button type="button" class="btn btn-outline-primary " data-toggle="modal" data-target="#register_btn" id="register_button" >注册</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login_btn" id="login_button">登录</button>
+    </div>
+
+
+
+</nav>
+<div class="modal fade" id="login_btn">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+                <h4 class="modal-title">登录</h4>
+<!--                关闭-->
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+                <form action="" class="needs-validation" name="form1" >
+                    <div class="form-group">
+                        <label for="uname">Username:</label>
+                        <input type="text" class="form-control" id="uname" placeholder="输入用户名" name="uname" required>
+
+                        <div id="username-feedback">请输入用户名！</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="输入密码" name="pwd" required>
+
+                        <div id="password-feedback">请输入密码！</div>
+                    </div>
+                    <button type="button" class="btn btn-info" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="login_1">提交</button>
+                </form>
+            </div>
+
+            <!-- 模态框底部 -->
+<!--            <div class="modal-footer">-->
+<!--                <button type="button" class="btn btn-info" data-dismiss="modal">取消</button>-->
+<!--                <button type="button" class="btn btn-info" data-dismiss="modal">登录</button>-->
+<!--            </div>-->
+
+        </div>
+    </div>
+</div>
+
+/nav>
+<div class="modal fade" id="register_btn">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+                <h4 class="modal-title">员工注册</h4>
+                <!--                关闭-->
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+                <form action="" class="needs-validation" name="form2" >
+                    <div class="form-group">
+                        <label for="uname">Username:</label>
+                        <input type="text" class="form-control" id="uname2" placeholder="输入用户名" name="uname2" required>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="text" class="form-control" id="pwd2" placeholder="输入密码" name="pwd2" required>
+
+
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">姓名:</label>
+                        <input type="text" class="form-control" id="name2" placeholder="输入" name="name2" required>
+
+
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">职位:</label>
+                        <input type="text" class="form-control" id="rank2" placeholder="输入密码" name="rank2" required>
+
+
+                    </div>
+                    <button type="button" class="btn btn-info" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="register_1">提交</button>
+                </form>
+            </div>
+
+            <!-- 模态框底部 -->
+            <!--            <div class="modal-footer">-->
+            <!--                <button type="button" class="btn btn-info" data-dismiss="modal">取消</button>-->
+            <!--                <button type="button" class="btn btn-info" data-dismiss="modal">登录</button>-->
+            <!--            </div>-->
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-sm-2 col-2" id="myScrollspy">
+            <ul class="nav nav-pills flex-column" id="navigation">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#section1">今日客人一览</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section2">已使用房间一览</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section3">剩余房间一览</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section4">目前房价</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div class="col-sm-9 col-8">
+            <div id="section1" class="rounded">
+                <h3>|今日客人分析|</h3>
+                <canvas id="canvas_circle" width="600" height="400" style="border:2px solid #0026ff; margin-left:3em; " >
+                    浏览器不支持canvas
+                </canvas>
+            </div>
+            <div id="section2" class="rounded">
+                <h3>|今日已使用房间分析|</h3>
+                <canvas id="canvas_circle2" width="600" height="400" style="border:2px solid #0026ff; margin-left:3em; " >
+                    浏览器不支持canvas
+                </canvas>
+            </div>
+            <div id="section3" class="rounded">
+                <h3>|今日剩余房间分析|</h3>
+                <canvas id="canvas_circle3" width="600" height="400" style="border:2px solid #0026ff; margin-left:3em; " >
+                    浏览器不支持canvas
+                </canvas>
+            </div>
+            <div id="section4" class="rounded">
+                <h3>|今日营收与房价|</h3>
+                    <h4 id="pro1" ></h4>
+                <h4 id="pro2" ></h4>
+                <h4 id="pro3" ></h4>
+                <h4 id="pro4" ></h4>
+                <h4 id="pro5" ></h4>
+                <h4 id="pro6" ></h4>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>老奶奶酒店</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/my.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/js/my_search_customer.js"></script>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+
+<!--功能显示-->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" >
+    <!--        左对齐-->
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="./main.html">
+        <img src="/resources/logo.jpeg" alt="logo" style="width:60px;">
+    </a>
+
+    <!-- 普通导航 -->
+    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" id="function_opt">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">
+                客户管理
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">增加客户</a>
+                <a class="dropdown-item" href="#">删除客户</a>
+                <a class="dropdown-item" href="#">修改客户</a>
+                <a class="dropdown-item" href="#">查询客户</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">
+                订单管理
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">创建订单</a>
+                <a class="dropdown-item" href="#">删除订单</a>
+                <a class="dropdown-item" href="#">修改订单</a>
+                <a class="dropdown-item" href="#">查询订单</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop3" data-toggle="dropdown">
+                客房管理
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">增加客房</a>
+                <a class="dropdown-item" href="#">删除客房</a>
+                <a class="dropdown-item" href="#">修改客房</a>
+                <a class="dropdown-item" href="#">查询客房</a>
+            </div>
+        </li>
+        <!--        下拉导航-->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop4" data-toggle="dropdown">
+                入住信息管理
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">增加入住信息</a>
+                <a class="dropdown-item" href="#">删除入住信息</a>
+                <a class="dropdown-item" href="#">修改入住信息</a>
+                <a class="dropdown-item" href="#">查询入住信息</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown" id="navbardrop5">
+            <div class="nav-link dropdown-toggle"  data-toggle="dropdown" id="item1"></div>
+            <div class="dropdown-menu" id="userdrop">
+                <div id="item2" class="dropdown-item"></div>
+                <div id="item3" class="dropdown-item"></div>
+                <div id="item4" class="dropdown-item"></div>
+            </div>
+        </li>
+    </ul>
+    <!--        右对齐-->
+
+    <div class="col-md-3 text-end">
+        <button type="button" class="btn btn-outline-primary me-2" id="register_button" >注册</button>
+        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#login_btn">登录</button>
+    </div>
+
+
+
+</nav>
+<div class="modal fade" id="login_btn">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+                <h4 class="modal-title">登录</h4>
+                <!--                关闭-->
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+                <form action="" class="needs-validation" name="form1" >
+                    <div class="form-group">
+                        <label for="uname">Username:</label>
+                        <input type="text" class="form-control" id="uname" placeholder="输入用户名" name="uname" required>
+
+                        <div id="username-feedback">请输入用户名！</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="输入密码" name="pwd" required>
+
+                        <div id="password-feedback">请输入密码！</div>
+                    </div>
+                    <button type="button" class="btn btn-info" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="login_1">提交</button>
+                </form>
+            </div>
+
+            <!-- 模态框底部 -->
+            <!--            <div class="modal-footer">-->
+            <!--                <button type="button" class="btn btn-info" data-dismiss="modal">取消</button>-->
+            <!--                <button type="button" class="btn btn-info" data-dismiss="modal">登录</button>-->
+            <!--            </div>-->
+
+        </div>
+    </div>
+</div>
+<br><br><br><br><br>
+<div class="col-lg-auto"  style="width: 25em ;margin:5em 10em 5em 20em">
+    <form action="" name="form3">
+        <div class="form-group">
+            <label for="sfzh3">房间编号:</label>
+            <input type="text" class="form-control" id="sfzh3" placeholder="输入房间编号" name="sfzh3" required>
+        </div>
+        <button type="button" class="btn btn-primary" id="sfzcheck">查询</button>
+    </form>
+</div>
+<div class="card bg-info text-white " id="card1">
+    <div class="card-body" id="item_21"></div>
+    <div class="card-body " id="item_22"></div>
+    <div class="card-body" id="item_23"></div>
+    <div class="card-body" id="item_24"></div>
+</div>
+
+
+
+
+
+</body>
+</html>

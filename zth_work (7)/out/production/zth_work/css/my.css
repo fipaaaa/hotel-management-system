@@ -1,0 +1,61 @@
+body {
+    position: relative;
+}
+ul.nav-pills {
+    top: 120px;
+    position: fixed;
+    width: 15em;
+}
+div.col-8 div {
+    padding-top: 7em;
+    padding-bottom:15em;
+    margin-bottom: 5em;
+}
+.nav-item{
+    margin: 0 3em;
+}
+#myScrollspy{
+    border-color: black;
+}
+#navigation li{
+    margin-top: 2em;
+}
+#function_opt{
+       visibility:hidden;
+}
+
+div.col-8 div:nth-child(1){
+    background: #c1ffba;
+}
+
+div.col-8 div:nth-child(2){
+    background:#fffeb7
+}
+
+div.col-8 div:nth-child(3){
+    background:#b9e2ff;
+}
+
+div.col-8 div:nth-child(4){
+    background: #ffc3f2;
+}
+
+#register_button{
+    visibility: hidden;
+}
+
+#checkbox_feedback{
+    visibility: hidden;
+    color: red;
+}
+
+#username-feedback{
+    visibility: hidden;
+    color: red;
+
+}
+
+#password-feedback{
+    visibility: hidden;
+    color: red;
+}

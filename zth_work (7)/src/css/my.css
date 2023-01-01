@@ -1,0 +1,108 @@
+body {
+    position: relative;
+}
+ul.nav-pills {
+    top: 120px;
+    position: fixed;
+    width: 15em;
+}
+div.col-8 div {
+    padding-top: 7em;
+    padding-bottom:10em;
+    margin-bottom: 5em;
+}
+.nav-item{
+    margin: 0 3em;
+}
+#myScrollspy{
+    border-color: black;
+}
+#navigation li{
+    margin-top: 2em;
+}
+#function_opt{
+       visibility:hidden;
+}
+
+div.col-8 div:nth-child(1){
+    background: #c1ffba;
+}
+
+div.col-8 div:nth-child(2){
+    background:#fffeb7
+}
+
+div.col-8 div:nth-child(3){
+    background:#b9e2ff;
+}
+
+div.col-8 div:nth-child(4){
+    background: #ffc3f2;
+}
+
+#register_button{
+    visibility: hidden;
+}
+
+#checkbox_feedback{
+    visibility: hidden;
+    color: red;
+}
+
+#username-feedback{
+    visibility: hidden;
+    color: red;
+
+}
+
+#sfzh-feedback2{
+    visibility: hidden;
+    color: red;
+}
+
+#khxm-feedback2{
+    visibility: hidden;
+    color: red;
+
+}
+#sjh-feedback2{
+    visibility: hidden;
+    color: red;
+}
+#xb-feedback2{
+    visibility: hidden;
+    color: red;
+}
+#zk-feedback2{
+    visibility: hidden;
+    color: red;
+}
+#password-feedback{
+    visibility: hidden;
+    color: red;
+}
+#sfzh2-feedback2{
+    visibility: hidden;
+    color: red;
+}
+#navbardrop5{
+    visibility: hidden;
+}
+#register_button{
+    visibility: hidden;
+}
+
+#input2{
+    margin:5em 25em 5em 25em;
+    width: 20em;
+}
+
+#card1{
+    visibility: hidden;
+    width: 15em;
+    margin:5em 30em
+}
+#room_show{
+    visibility: hidden;
+
+}
